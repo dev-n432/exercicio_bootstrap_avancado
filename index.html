@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Avançado</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        .nav-link {
+            text-align: center;
+        }
+
+        .nav-link:hover {
+            background-color: #e2e6ea;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .card img{
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de navegação -->
+    <div class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <h1>Super Car</h1>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Promoções</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Carrossel -->
+    <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            <div data-bs-interval="3000" class="carousel-item active">
+                <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2016/05/06/16/32/car-1376190_1280.jpg">
+            </div>
+            <div data-bs-interval="3000" class="carousel-item">
+                <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2012/11/02/13/02/car-63930_1280.jpg">
+            </div>
+            <div data-bs-interval="3000" class="carousel-item">
+                <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2015/04/14/09/13/ferrari-721858_1280.jpg">
+            </div>
+            <div data-bs-interval="3000" class="carousel-item">
+                <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2017/03/27/14/56/auto-2179220_1280.jpg">
+            </div>
+            <div data-bs-interval="3000" class="carousel-item">
+                <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2020/01/26/18/52/porsche-4795517_1280.jpg">
+            </div>
+            <div data-bs-interval="3000" class="carousel-item">
+                <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2021/11/08/14/25/car-6779247_1280.jpg">
+            </div>
+        </div>
+
+        <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="5"></button>
+        </div>
+
+    </div>
+
+    <!-- grid -->
+    <div class="container mt-5">
+        <div class="row">
+
+            <!-- card 1 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                <div class="card h100">
+                    <img src="https://cdn.pixabay.com/photo/2016/05/06/16/32/car-1376190_1280.jpg" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Ford GT</h5>
+                        <p class="card-text">Superesportivo da Ford, com design aerodinâmico e alto desempenho.</p>
+                        <a href="#" class="btn btn-success btn-block mt-auto">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                <div class="card h-100">
+                    <img src="https://cdn.pixabay.com/photo/2012/11/02/13/02/car-63930_1280.jpg" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Ford Mustang</h5>
+                        <p class="card-text">Ícone americano, sinônimo de potência e estilo desde 1964.</p>
+                        <a href="#" class="btn btn-success btn-block mt-auto">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                <div class="card h-100">
+                    <img src="https://cdn.pixabay.com/photo/2015/04/14/09/13/ferrari-721858_1280.jpg" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Ferrari</h5>
+                        <p class="card-text">Marca italiana de carros esportivos de luxo, famosa por sua elegância e velocidade.</p>
+                        <a href="#" class="btn btn-success btn-block mt-auto">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                <div class="card h-100">
+                    <img src="https://cdn.pixabay.com/photo/2017/03/27/14/56/auto-2179220_1280.jpg" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Mercedes-Benz</h5>
+                        <p class="card-text">Marca de luxo alemã, reconhecida por qualidade e inovação em seus carros.</p>
+                        <a href="#" class="btn btn-success btn-block mt-auto">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 5 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                <div class="card h-100">
+                    <img src="https://cdn.pixabay.com/photo/2020/01/26/18/52/porsche-4795517_1280.jpg" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Porshe</h5>
+                        <p class="card-text">Agilidade, tradição e excelência em carros esportivos alemães.</p>
+                        <a href="#" class="btn btn-success btn-block mt-auto">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 6 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                <div class="card h-100">
+                    <img src="https://cdn.pixabay.com/photo/2021/11/08/14/25/car-6779247_1280.jpg" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Lamborghini</h5>
+                        <p class="card-text">Marca italiana de carros esportivos exóticos, conhecida por design extravagante.</p>
+                        <a href="#" class="btn btn-success mt-auto">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
